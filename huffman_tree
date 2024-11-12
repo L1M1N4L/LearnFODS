@@ -1,0 +1,40 @@
+// Huffman Tree
+digraph {
+	rankdir=TB
+	node [shape=circle style=filled]
+	root [label=20 fillcolor=lightgray]
+	root -> root_l [label=0]
+	root_l [label=8 fillcolor=lightgray]
+	root_l -> root_l_l [label=0]
+	root_l_l [label="z
+4" fillcolor=lightblue]
+	root_l -> root_l_r [label=1]
+	root_l_r [label="e
+4" fillcolor=lightblue]
+	root -> root_r [label=1]
+	root_r [label=12 fillcolor=lightgray]
+	root_r -> root_r_l [label=0]
+	root_r_l [label=5 fillcolor=lightgray]
+	root_r_l -> root_r_l_l [label=0]
+	root_r_l_l [label="space
+2" fillcolor=lightblue]
+	root_r_l -> root_r_l_r [label=1]
+	root_r_l_r [label="u
+3" fillcolor=lightblue]
+	root_r -> root_r_r [label=1]
+	root_r_r [label="b
+7" fillcolor=lightblue]
+	subgraph cluster_0 {
+		label="Compression Information"
+		node [fillcolor=white shape=box style=filled]
+		stats [label="Original Size: 160 bits
+Compressed Size: 45 bits
+Compression Ratio: 71.88%"]
+		codes [label="Huffman Codes:
+'space': 100
+'b': 11
+'e': 01
+'u': 101
+'z': 00"]
+	}
+}
